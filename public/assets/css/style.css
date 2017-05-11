@@ -1,0 +1,181 @@
+h1{
+  position: relative;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 60px;
+  left: -25px;
+}
+
+
+input[type="text"] {
+  background-color: black;
+  color: white;
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+.nav-email {
+  position: relative;
+  float: right;
+  width: 20%;
+  font-family: 'Kaushan Script', cursive;
+  opacity: 0.8;
+}  
+
+.sign-in-btn{
+  position: relative;
+  float: right;
+}
+.login-box{
+    color: white;
+    background-color: black;
+    width:  33%;
+    position: relative;
+    left:  460px;
+    padding-bottom: 80px;
+    top: 200px;
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 200px; 
+    height: 100px; 
+    opacity: 0.7;
+}  
+
+
+.full_form_header{
+
+font-size: 100%;
+position: relative;
+bottom: 180px;
+right: 110px;
+color: white;
+font-weight: bolder;
+width: 100px;
+}
+
+.input-name{
+ position: relative;
+ right: 95px;
+ bottom: 150px;
+}
+
+.input-email{
+ position: relative;
+ right: 95px;
+ bottom: 148px;
+}
+
+.input-password{
+ position: relative;
+ right: 95px;
+ bottom: 145px;
+}
+
+.sign-up-btn{
+ position: relative;
+ right: -100px;
+ bottom: 50px;
+ width: 45px;
+ font-family: 'Kaushan Script', cursive;
+}
+
+ button {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  padding: 15px 45px;
+  font-size: 48px;
+  font-family: 'Kaushan Script', cursive;
+  line-height: 1.8;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+button:focus {
+  outline: none
+}
+
+section.gradient button {
+  color: #fff;
+  text-shadow: -2px 2px #346392;
+  background-color: #ff9664;
+  background-image: linear-gradient(top, #6496c8, #346392);
+  box-shadow: inset 0 0 0 1px #27496d;
+  border: none;
+  border-radius: 15px;
+}
+
+section.gradient button:hover,
+section.gradient button.hover {
+  box-shadow: inset 0 0 0 1px #27496d,0 5px 15px #193047;
+}
+
+section.gradient button:active,
+section.gradient button.active {
+  box-shadow: inset 0 0 0 1px #27496d,inset 0 5px 30px #193047;
+}
+
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('assets/images/poolbackground1.jpg') center center / cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
+}
+
+
+.service-main-content{
+	position: relative; 
+	width: 40%;
+	left: 440px;
+	top: 60px;
+	opacity: 0.9;
+	color: darkblue;
+}
+.menu-options {
+	position: relative;
+	left: 150px;
+}
