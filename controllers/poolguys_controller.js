@@ -20,10 +20,6 @@ router.get("/login", function(req, res) {
 res.sendFile(path.join(__dirname, '../public', 'login.html'));
 });
 
-router.get("/provider", function(req, res) {
-res.sendFile(path.join(__dirname, '../public', 'provider.html'));
-});
-
 router.get("/services", function(req, res) {
 res.sendFile(path.join(__dirname, '../public', 'services.html'));
 });
