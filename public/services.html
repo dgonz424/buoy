@@ -38,14 +38,16 @@ body {
    <h3>Choose your pool service</h3>
    <select id="lstService" multiple="multiple">
     <option value="1">Water Balance</option>
-    <option value="2">Shocking Pool</option>
-    <option value="3">Clarification</option>
-    <option value="4">Peridoic Clenaing</option>
-    <option value="5">Filter backwashing and Repair</option>
+    <option value="2">Pool Sanitizing</option>
+    <option value="3">Shocking Treatment</option>
+    <option value="4">Clarification</option>
+    <option value="5">Periodic Cleaning</option>
+    <option value="6">Filter backwashing and Repair</option>
 
     
 </select>
-<input type="button" id="btnSelected" value="Done" />
+<input type="checkbox" id="btnSelected" value="Done"/>
+<button type="submit" id="submit" class="btn btn-primary submit">Submit</button>
 </div>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -62,13 +64,49 @@ body {
             includeSelectAllOption: true
         });
     });
-    $('#btnSelected').click(function () {
+    $('#submit').click(function () {
         var selected = $("#lstService option:selected");
-        var message = "";
-        selected.each(function () {
-            message += $(this).text() + " " + $(this).val() + "\n";
+        var formdata = {};
+        //loop through selected checkboxes and create data parameter objects
+        for (var i = 0; i < selected.length; i++) {
+          console.log($(selected[i]).val());
+          console.log(typeof $(selected[i]).val());
+          switch ($(selected[i]).val()) {
+            case "1":
+              formdata.bal = 1;
+              break;
+            case "2":
+              formdata.san = 1;
+              break;
+            case "3":
+              formdata.shock = 1;
+              break;
+            case "4":
+              formdata.clar = 1;
+              break;
+            case "5":
+              formdata.per = 1;
+              break;
+            case "6":
+              formdata.fil = 1;
+              break;
+              //TODO add case for each checkbox and fulfill TODO in apiroutes.js line 19
+          }
+        }//end of for loop
+        console.log("formdata" , formdata);
+        $.ajax({
+            url: "api/poolguys",
+            type: "get", //send it through get method
+            data: formdata,
+            success: function(response) {
+              //Do Something
+              console.log(response);
+            },
+            error: function(xhr) {
+              //Do Something to handle error
+              console.log(xhr);
+            }
         });
-        alert(message);
     });
     console.log(this);
 </script>

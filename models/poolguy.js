@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var poolguys = sequelize.define("pool guys", {
+  var PoolGuy = sequelize.define("PoolGuy", {
     // Giving the Author model a name of type STRING
   id: {
       primaryKey: true,
@@ -52,5 +52,5 @@ module.exports = function(sequelize, DataTypes) {
       len: [1]
     }
   });
-  return poolguys;
+  return PoolGuy;
 };

@@ -30,7 +30,7 @@ res.sendFile(path.join(__dirname, '../public', 'services.html'));
 
 // //saves customer info/redirects to services
 // router.post("/login", function(req, res) {
-// .findAll().then(function(dbpoolguys) {
+// poolguys.findAll().then(function(dbpoolguys) {
    
 //     res.redirect("/services");
 //     });
