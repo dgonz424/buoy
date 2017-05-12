@@ -15,7 +15,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 var routes = require("./controllers/poolguys_controller.js");
 require("./routes/apiroutes.js") (app);
 
-
 app.use("/", routes);
 
 // Syncing our sequelize models and then starting our express app
