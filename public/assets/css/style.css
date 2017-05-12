@@ -2,7 +2,7 @@ h1{
   position: relative;
   font-family: 'Kaushan Script', cursive;
   font-size: 60px;
-  left: -25px;
+  left: -10px;
 }
 
 
@@ -37,7 +37,7 @@ input[type="text"]:focus {
 .login-box{
     color: white;
     background-color: black;
-    width:  33%;
+    width:  30%;
     position: relative;
     left:  460px;
     padding-bottom: 80px;
@@ -79,28 +79,25 @@ width: 100px;
  bottom: 145px;
 }
 
+.input-services {
+ position: relative;
+ font-family: 'Kaushan Script', cursive;
+ right: 45px;
+ width: 45px;
+ bottom: 135px;
+}
+
 .sign-up-btn{
  position: relative;
- right: -100px;
- bottom: 50px;
+ right: 45px;
+ bottom: 130px;
  width: 45px;
  font-family: 'Kaushan Script', cursive;
 }
 
- button {
-  display: inline-block;
-  margin: 0 10px 0 0;
-  padding: 15px 45px;
-  font-size: 48px;
-  font-family: 'Kaushan Script', cursive;
-  line-height: 1.8;
-  appearance: none;
-  box-shadow: none;
-  border-radius: 0;
-}
-
+ 
 button:focus {
-  outline: none
+  outline: none;
 }
 
 section.gradient button {
@@ -178,4 +175,8 @@ section.gradient button.active {
 .menu-options {
 	position: relative;
 	left: 150px;
+}
+.panel-heading {
+  font-family: 'Kaushan Script', cursive;
+  text-align: center;
 }

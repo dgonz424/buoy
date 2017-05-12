@@ -2,27 +2,25 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-	<title>Buoy</title>
-	</head>
-	<body>
-<style type="text/css" media="screen">
-body {
-   background-image: url('assets/images/poolbackground1.jpg');
-   background-size: 100%;
-   background-repeat: no-repeat;
-   min-width: 100%;
-   min-height: 100%;
-   width: auto;
-   height: auto;
- }
-</style>
+  <title>Buoy</title>
+  </head>
+  <body>
+
+    <!---video test -->
+  <div class="fullscreen-bg">
+    <video loop autoplay poster="" class="fullscreen-bg__video">
+    <source src="assets/video/poolvid1.mp4" type="video/mp4">
+   </video>
+</div>
+
+
  
   <!--pool service content-->
     <div class="service-main-content">
@@ -35,16 +33,14 @@ body {
    </div>
    <!--menu select options-->
    <div class="menu-options">
-   <h3>Choose your pool service</h3>
-   <select id="lstService" multiple="multiple">
+   
+<select id="lstService" multiple="multiple">
     <option value="1">Water Balance</option>
     <option value="2">Pool Sanitizing</option>
     <option value="3">Shocking Treatment</option>
     <option value="4">Clarification</option>
     <option value="5">Periodic Cleaning</option>
     <option value="6">Filter backwashing and Repair</option>
-
-    
 </select>
 <input type="checkbox" id="btnSelected" value="Done"/>
 <button type="submit" id="submit" class="btn btn-primary submit">Submit</button>
@@ -110,9 +106,8 @@ body {
     });
     console.log(this);
 </script>
-  
 </div>
 </div>
 </div>
-	</body>
+  </body>
 </html>
