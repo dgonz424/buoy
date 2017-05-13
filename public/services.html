@@ -27,7 +27,7 @@
     <div class="service-main-content">
     <div class="panel panel-primary">
    <!-- Default panel contents -->
-    <div class="panel-heading">Choose Your Service</div>
+    <div class="panel-heading">Choose Your Service(s) and Contact Your Pool Guy</div>
     <div class="panel-body" id= "response">
     <!--pool service ads go in here-->
     <p></p>
@@ -57,13 +57,14 @@
     type="text/javascript"></script>
 <script type="text/javascript">
 
-var response = null;
+    var response = null;
 
     $(function () {
         $('#lstService').multiselect({
             includeSelectAllOption: true
         });
     });
+
     $('#submit').click(function () {
         var selected = $("#lstService option:selected");
         var formdata = {};
@@ -99,19 +100,17 @@ var response = null;
             type: "get", //send it through get method
             data: formdata,
             success: function(response) {
-              // response = response[0];
-
-              for (var i = 0; i < response.length; i++) {
-                response = response[i];
-              }
-
-              //make a jquery selector 
+            
+             //make a jquery selector 
               response.poolguy_name;
 
               response.phone_number;
 
-             //target your thing with your desired response string
-              $('#response').append(" Call or text " + response.poolguy_name + " at " + response.phone_number);
+              //target your thing with your desired response string
+              for (var i = 0; i < response.length; i++) {
+                $('#response').append(" Call or text pool provider " + response[i].poolguy_name + " at " + response[i].phone_number + "<br>");
+              }
+             
               //Do Something
               console.log(response);
             },
