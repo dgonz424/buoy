@@ -28,7 +28,7 @@
     <div class="panel panel-primary">
    <!-- Default panel contents -->
     <div class="panel-heading">Choose Your Service</div>
-    <div class="panel-body">
+    <div class="panel-body" id= "response">
     <!--pool service ads go in here-->
     <p></p>
    </div>
@@ -56,6 +56,9 @@
 <script src="https://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js"
     type="text/javascript"></script>
 <script type="text/javascript">
+
+var response = null;
+
     $(function () {
         $('#lstService').multiselect({
             includeSelectAllOption: true
@@ -96,6 +99,19 @@
             type: "get", //send it through get method
             data: formdata,
             success: function(response) {
+              // response = response[0];
+
+              for (var i = 0; i < response.length; i++) {
+                response = response[i];
+              }
+
+              //make a jquery selector 
+              response.poolguy_name;
+
+              response.phone_number;
+
+             //target your thing with your desired response string
+              $('#response').append(" Call or text " + response.poolguy_name + " at " + response.phone_number);
               //Do Something
               console.log(response);
             },

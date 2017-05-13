@@ -180,3 +180,7 @@ section.gradient button.active {
   font-family: 'Kaushan Script', cursive;
   text-align: center;
 }
+
+#response {
+  text-align: center;
+}
